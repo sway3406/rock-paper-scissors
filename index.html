@@ -9,9 +9,9 @@
     </head>
     <body class="font-style">
 
-    <section class="nav-bar">
+    <nav class="nav-bar">
       <button class="change-game button font-style">Change Game</button>
-    </section>
+    </nav>
 
 
     <header class="header">
@@ -19,20 +19,63 @@
           <span class="page-header">Rock,&nbsp Paper,&nbsp Scissors</span>
         </h1>
     </header>
+    <!-- <main class="game-content" id="game-components"> -->
 
-
-    <section class="landing-stage" id="landing-page-stage">
-      <header class="choose-your-game"
-        <h2>Choose Your Game</h2>
+    <section class="main-stage" id="main-content-stage">
+      <header class="game-header">
+        <h2>Dynamic Header</h2>
       </header>
-      <section class="choose-game-container"
-        <section class="games">
-          <div class="game-options" id="classic-game-box"</div>
-          <div class="game-options" id="flavorful-game-box"</div>
+      <section class="choose-game-container">
+        <section class="arena">
+          <div class="game-options" id="classic-game-box"></div>
+          <div class="game-options" id="flavorful-game-box"></div>
         </section>
-      </section
+      </section>
+
+      <section class="classic-game-container hidden" id="classic-battle-stage">
+        <section class="arena">
+          <button class="fighter-buttons" id="rock-button"></button>
+          <button class="fighter-buttons" id="paper-button"></button>
+          <button class="fighter-buttons" id="scissor-button"></button>
+        </section>
+      </section>
+
+      <section class="flavorful-game-container hidden" id="flavor-battle-stage">
+        <section class="arena">
+          <button class="fighter-buttons" id="cake-button"></button>
+          <button class="fighter-buttons" id="pie-button"></button>
+          <button class="fighter-buttons" id="cookie-button"></button>
+          <button class="fighter-buttons" id="brownie-button"></button>
+          <button class="fighter-buttons" id="cupcake-button"></button>
+        </section>
+      </section>
+
     </section>
 
+
+
+      <!-- <section class="opponents-container hidden" id="opponents-stats">
+        <header>
+            <h2 class="fighters">Fighters</h2>
+        </header>
+        <section class="player-details">
+            <img class="human-emoji" src="../assets/person-svgrepo-com.svg" alt="non gendered human sillhouette">
+            <p class="score" id="human-score">0</p>
+        </section>
+        <section class="player-details">
+            <img class="human-emoji" src="" alt="">
+            <p class="score" id="machine-score">0</p>
+        </section>
+      </section> -->
+
+
+
+
+
+
+
+
+    <!-- </main> -->
 
 
 
