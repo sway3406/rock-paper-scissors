@@ -8,28 +8,93 @@
          <title>Rock, Paper, Scissors</title>
     </head>
     <body class="font-style">
-        <section class="nav-bar">
-            <button class="change-game button font-style">Change Game</button>
-        </section>
-        <header class="header">
-            <h1>
-                <span class="page-header">Rock, Paper, Scissors</span>
-            </h1>
-        </header>
-        <section class="landing-stage" id="landing-page-stage">
-    <header class="choose-your-game"
-        <h2>Choose Your Game</h2>
+
+    <nav class="nav-bar">
+      <button class="change-game button font-style">Change Game</button>
+    </nav>
+
+
+    <header class="header">
+        <h1>
+          <span class="page-header">Rock,&nbsp Paper,&nbsp Scissors</span>
+        </h1>
     </header>
-    <section class="choose-game-buttons"
-        <button class="game-buttons" id="classic-game-button"/>
-        <button class="game-buttons" id="flavorful-game-button"/>
-    </section
+
+    <section class="main-stage" id="main-content-stage">
+      <header class="game-header">
+        <h2>Dynamic Header</h2>
+      </header>
+      <section class="choose-game-container">
+        <section class="arena">
+          <div class="game-options" id="classic-game-box"></div>
+          <div class="game-options" id="flavorful-game-box"></div>
+        </section>
+      </section>
+
+      <section class="classic-game-container hidden" id="classic-battle-stage">
+        <section class="arena">
+          <button class="fighter-buttons" id="rock-button"></button>
+          <button class="fighter-buttons" id="paper-button"></button>
+          <button class="fighter-buttons" id="scissor-button"></button>
+        </section>
+      </section>
+
+      <section class="flavorful-game-container hidden" id="flavor-battle-stage">
+        <section class="arena">
+          <button class="fighter-buttons" id="cake-button"></button>
+          <button class="fighter-buttons" id="pie-button"></button>
+          <button class="fighter-buttons" id="cookie-button"></button>
+          <button class="fighter-buttons" id="ice-cream-button"></button>
+          <button class="fighter-buttons" id="cupcake-button"></button>
+        </section>
+      </section>
+
+    </section>
+
+    <section class="players-container" id="player-stats">
+      <header>
+          <h2 class="fighters">Fighters</h2>
+      </header>
+      <section class="players-info-conatiner">
+        <section class="player-details-boxes">
+          <img class="player-image" id="person-id" src="../assets/person-svgrepo-com.svg" alt="non gendered human sillhouette">
+          <p class="score" id="human-score">0</p>
+        </section>
+        <section class="player-details-boxes">
+          <img class="player-image" id="person-id" src="../assets/person-svgrepo-com.svg" alt="non gendered human sillhouette">
+            <p class="score" id="human-score">0</p>
+        </section>
+      </section>
+    </section>
+
+
+
+      <!-- <section class="opponents-container hidden" id="opponents-stats">
+        <header>
+            <h2 class="fighters">Fighters</h2>
+        </header>
+        <section class="player-details">
+            <img class="player-image" id="person-id" src="../assets/person-svgrepo-com.svg" alt="non gendered human sillhouette">
+            <p class="score" id="human-score">0</p>
+        </section>
+        <section class="player-details">
+            <img class="player-image" id="computer-id" src="" alt="">
+            <p class="score" id="machine-score">0</p>
+        </section>
+      </section> -->
 
 
 
 
-    <!-- <script src="./src/Computer.js"></script> -->
-    <!-- <script src="./src/Player.js"></script> -->
+
+
+
+
+
+
+
+
+
     <script src="./src/main.js"></script>
     </body>
 </html>
