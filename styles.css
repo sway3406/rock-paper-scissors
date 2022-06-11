@@ -1,6 +1,6 @@
-/* * {
+* {
 border: 1px solid red;
-} * */
+} *
 
 .font-style  {
   font-family: 'Gloria Hallelujah', cursive;
@@ -158,4 +158,9 @@ height: 70%;
   display: flex;
   align-items: flex-start;
   width: 70px;
+}
+
+.fighter-buttons {
+  height: 110px;
+  width: 110px;
 }
