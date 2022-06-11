@@ -16,6 +16,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  /* background-image: url("./assets/players/peakpx.jpg"); */
   height: 100vh;
   width: 100vw;
 }
@@ -144,6 +145,7 @@ height: 70%;
 
 .score {
  font-size: 30px;
+ margin: 2px;
 }
 
 /* ~~~~~~~~~ End Content conatiners ~~~~~~~~~ */
@@ -160,7 +162,64 @@ height: 70%;
   width: 70px;
 }
 
+
+
+/* ~~~~~~~~ Buttons ~~~~~~~~~ */
 .fighter-buttons {
   height: 110px;
   width: 110px;
+}
+
+.fighter-buttons:hover {
+  cursor: pointer;
+  background-color: cyan;
+}
+
+/* ~~~~~ classic game buttons ~~~~~~ */
+
+#classic-game-box:hover {
+  cursor: pointer;
+  background-color: cyan;
+}
+
+#rock-button {
+  background-image: url("./assets/classics/rock-svgrepo-com.svg");
+  background-size: cover;
+}
+
+#paper-button {
+  background-image: url("./assets/classics/paper-sheet-svgrepo-com.svg");
+  background-size: cover;
+}
+
+#scissor-button {
+  background-image: url("./assets/classics/scissors-svgrepo-com.svg");
+  background-size: cover;
+}
+
+/*~~~~~~~ flavorful game buttons ~~~~~~~~  */
+
+#cake-button {
+  background-image: url("./assets/desserts/cake-svgrepo-com.svg");
+  background-size: cover;
+}
+
+#pie-button {
+  background-image: url("./assets/desserts/pie-svgrepo-com.svg");
+  background-size: cover;
+}
+
+#cookie-button {
+  background-image: url("./assets/desserts/cookie-svgrepo-com.svg");
+  background-size: cover;
+}
+
+#ice-cream-button {
+  background-image: url("./assets/desserts/ice-cream-svgrepo-com.svg");
+  background-size: cover;
+}
+
+#cupcake-button {
+  background-image: url("./assets/desserts/cupcake-svgrepo-com.svg");
+  background-size: cover;
 }
