@@ -185,6 +185,11 @@ height: 70%;
   background-size: cover;
 }
 
+#scissor-button {
+  background-image: url("./assets/classics/scissors-svgrepo-com.svg");
+  background-size: cover;
+}
+
 }
 #classic-game-box:hover {
   cursor: pointer;
