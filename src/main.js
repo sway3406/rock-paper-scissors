@@ -14,6 +14,8 @@ classicVersion.addEventListener('click', showClassic);
 flavorfulVersion.addEventListener('click', showFlavor);
 changeGameButton.addEventListener('click', showGames);
 
+
+//Toggling Functions
 function showClassic() {
   chooseGameContainer.classList.add('hidden');
   classicContainer.classList.remove('hidden');
