@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-image: url("./assets/background-/peakpx.jpg");
+  background-image: url("./assets/background-images/peakpx.jpg");
   height: 100vh;
   width: 100vw;
 }
@@ -237,6 +237,7 @@ height: 70%;
 #flavorful-game-box:hover {
   cursor: pointer;
   background-color: cyan;
+}
 
 #cake-button {
   background-image: url("./assets/desserts/cake-svgrepo-com.svg");
