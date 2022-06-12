@@ -2,7 +2,7 @@
 ## Same Great Game With Better Taste
 
 
-###Classic Version:
+### Classic Version:
 #### Fighters: Rock, Paper, Scissors
 
 ##### Rock smashes scissor
