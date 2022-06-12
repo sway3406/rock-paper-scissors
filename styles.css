@@ -217,17 +217,17 @@ height: 70%;
   background-color: cyan;
 }
 
-#rock-button {
+#rock {
   background-image: url("./assets/classics/rock-svgrepo-com.svg");
   background-size: cover;
 }
 
-#paper-button {
+#paper {
   background-image: url("./assets/classics/paper-sheet-svgrepo-com.svg");
   background-size: cover;
 }
 
-#scissor-button {
+#scissor {
   background-image: url("./assets/classics/scissors-svgrepo-com.svg");
   background-size: cover;
 }
@@ -239,27 +239,27 @@ height: 70%;
   background-color: cyan;
 }
 
-#cake-button {
+#cake {
   background-image: url("./assets/desserts/cake-svgrepo-com.svg");
   background-size: cover;
 }
 
-#pie-button {
+#pie {
   background-image: url("./assets/desserts/pie-svgrepo-com.svg");
   background-size: cover;
 }
 
-#cookie-button {
+#cookie {
   background-image: url("./assets/desserts/cookie-svgrepo-com.svg");
   background-size: cover;
 }
 
-#ice-cream-button {
+#ice-cream {
   background-image: url("./assets/desserts/ice-cream-svgrepo-com.svg");
   background-size: cover;
 }
 
-#cupcake-button {
+#cupcake {
   background-image: url("./assets/desserts/cupcake-svgrepo-com.svg");
   background-size: cover;
 }
