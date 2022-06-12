@@ -54,6 +54,7 @@ h1{
   border-color: black;
   border-width: 5px;
   border-radius: 20px;
+  background-color: white;
 }
 
 .game-header {
