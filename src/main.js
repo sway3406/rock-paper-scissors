@@ -1,70 +1,60 @@
 // Query Selectors
-var classicVersion = document.querySelector('#classic-game-box');
-var flavorfulVersion = document.querySelector('#flavorful-game-box');
 var chooseGameContainer =document.querySelector('.choose-game-container');
+var classicGame = document.querySelector('#classic-game-box');
+var flavorfulGame = document.querySelector('#flavorful-game-box');
 var classicContainer = document.querySelector('.classic-game-container');
 var flavorfulContainer =document.querySelector('.flavorful-game-container');
-var chooseGame = document.querySelector('.choose-game-container');
+var fighterButtons = document.querySelector('.main-stage');
 
 //Buttons
 var changeGameButton = document.querySelector('#change-game-button');
+var resetGameButton = document.querySelector('#reset-game-button');
 
 //Event Handlers
 window.addEventListener('load', createPlayers);
-classicVersion.addEventListener('click', showClassic);
-flavorfulVersion.addEventListener('click', showFlavor);
-changeGameButton.addEventListener('click', showGames);
+classicGame.addEventListener('click', showClassicGame);
+flavorfulGame.addEventListener('click', showFlavorGame);
+changeGameButton.addEventListener('click', showGamesOptions);
+// ResetGameButton.addEventListener('click', resetGame);
+fighterButtons.addEventListener('click', function(event){assignFighterToHuman(event)})
 
 var human;
 var computer;
 
 //Instantiate players on page load
 function createPlayers(){
-human = new Player({name: human});
-computer = new Player({name: computer});
+human = new Player({name: 'Human'});
+computer = new Player({name: 'Computer'});
 }
 
 //Toggling Functions
-function showClassic() {
+function showClassicGame() {
   chooseGameContainer.classList.add('hidden');
   classicContainer.classList.remove('hidden');
   computer.randomComputerFighter('classics');
 }
 
-function showFlavor () {
+function showFlavorGame() {
   chooseGameContainer.classList.add('hidden');
   flavorfulContainer.classList.remove('hidden');
   computer.randomComputerFighter('flavorfuls');
 }
 
-function showGames() {
+function showGamesOptions() {
   classicContainer.classList.add('hidden');
   flavorfulContainer.classList.add('hidden');
   chooseGameContainer.classList.remove('hidden');
 
 }
 
-
-
-
-
-
-
-
-// Master Random function
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+function assignFighterToHuman(event) {
+  if (event.target.classList.contains('fighter-buttons')) {
+    human.updatePlayerFighter(event);
+    console.log(event.target)
+  }
 }
 
-//This function produces a randomly chosen element from the classics array
-function getRandomClassic(classics) {
-  return classics[getRandomIndex(classics)];
-}
 
-//This function produces a randomly chosen element from the flavorfuls array
-function getRandomFlavorful(flavorfuls) {
-  return flavorfuls[getRandomIndex(flavorfuls)];
-}
 
 //This function will:
 // Get Invoked when a user selects an element by id from the DOM. This will either be from the classicVersion or the flavorfulVersion
