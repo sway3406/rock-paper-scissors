@@ -7,6 +7,7 @@ var classicContainer = document.querySelector('.classic-game-container');
 var flavorfulContainer =document.querySelector('.flavorful-game-container');
 var resultsContainer = document.querySelector('.results-container');
 var chosenPersonImg = document.querySelector('#person-choice');
+var chosenComputerImg = document.querySelector('#computer-choice');
 
 //Buttons
 var changeGameButton = document.querySelector('#change-game-button');
@@ -59,7 +60,8 @@ function showResults() {
     classicContainer.classList.add('hidden');
     flavorfulContainer.classList.add('hidden');gameHeader.innerHTML = `<h2>Results</h2>`
     resultsContainer.classList.remove('hidden');
-    chosenPersonImg.setAttribute( "src" , './assets/fighters/'+ game.players[0].pickFighter +'-svgrepo-com.svg')
+    chosenPersonImg.setAttribute( "src" , './assets/fighters/'+ game.players[0].pickFighter +'-svgrepo-com.svg');
+    chosenComputerImg.setAttribute("src", './assets/fighters/'+ game.players[1].pickFighter +'-svgrepo-com.svg')
 }
 
 // function showResults(gameType) {
