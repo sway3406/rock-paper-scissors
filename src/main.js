@@ -59,7 +59,7 @@ function showResults() {
     classicContainer.classList.add('hidden');
     flavorfulContainer.classList.add('hidden');gameHeader.innerHTML = `<h2>Results</h2>`
     resultsContainer.classList.remove('hidden');
-    chosenPersonImg.setAttribute( "src" , './assets/classics/'+ game.players[0].pickFighter +'-svgrepo-com.svg')
+    chosenPersonImg.setAttribute( "src" , './assets/fighters/'+ game.players[0].pickFighter +'-svgrepo-com.svg')
 }
 
 // function showResults(gameType) {
