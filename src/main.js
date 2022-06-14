@@ -28,6 +28,12 @@ function createPlayers() {
   computer = new Player({name: 'Computer'});
 }
 
+// This function will:
+// Change based on user input (if/else if)?
+// function toggleDynamicHeader {
+//
+// }
+
 //Toggling Functions
 function showClassicGame() {
   game = new Game('classics');
@@ -81,11 +87,7 @@ function assignFighters(event) {
 //
 // }
 
-// This function will:
-// Change based on user input (if/else if)?
-// function toggleDynamicHeader {
-//
-// }
+
 
 //This function will:
 // Display the image selected by the user to the DOM
@@ -98,14 +100,5 @@ function assignFighters(event) {
 // display the randomly chosen element by the computer
 // Image will be interpolated into results-container
 // function showRandomComputerFighter {
-//
-// }
-
-
-// function getPersonChoiceClassic() {
-//
-// }
-//
-// function getPersonChoiceFlavorful() {
 //
 // }
