@@ -38,7 +38,7 @@ function createPlayers() {
 }
 
 function chooseGameHeader() {
- gameHeader.innerHTML = `<h2>Choose A Game</h2>`
+  gameHeader.innerHTML = `<h2>Choose A Game</h2>`
 }
 
 function showClassicGame() {
@@ -62,6 +62,7 @@ function changeGame() {
   flavorfulContainer.classList.add('hidden');
   resultsContainer.classList.add('hidden');
   chooseGameContainer.classList.remove('hidden');
+  chooseGameHeader();
   resetScore();
 }
 
@@ -115,9 +116,9 @@ function showScore() {
 
 function resetGame() {
   if(game.gameType === 'classics') {
-    setTimeout(function() {classicContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden')}, 2000);
+    setTimeout(function() {classicContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden'), gameHeader.innerHTML = `<h2>Select A Fighter</h2>`}, 2000);
   } else {
-    setTimeout(function() {flavorfulContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden')}, 2000);
+    setTimeout(function() {flavorfulContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden'), gameHeader.innerHTML = `<h2>Select A Fighter</h2>`}, 2000);
   }
 }
 
