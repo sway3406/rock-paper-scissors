@@ -4,14 +4,17 @@ var classicGame = document.querySelector('#classic-game-box');
 var flavorfulGame = document.querySelector('#flavorful-game-box');
 var classicContainer = document.querySelector('.classic-game-container');
 var flavorfulContainer =document.querySelector('.flavorful-game-container');
-var fighterButtons = document.querySelector('.main-stage');
+
 
 //Buttons
 var changeGameButton = document.querySelector('#change-game-button');
 var resetGameButton = document.querySelector('#reset-game-button');
+var fighterButtons = document.querySelector('.main-stage');
+var gameHeader = document.querySelector('.game-header');
 
 //Event Handlers
 window.addEventListener('load', createPlayers);
+window.addEventListener('load', chooseGameHeader)
 classicGame.addEventListener('click', showClassicGame);
 flavorfulGame.addEventListener('click', showFlavorGame);
 changeGameButton.addEventListener('click', showGamesOptions);
@@ -30,15 +33,16 @@ function createPlayers() {
 
 // This function will:
 // Change based on user input (if/else if)?
-// function toggleDynamicHeader {
-//
-// }
+function chooseGameHeader() {
+ gameHeader.innerHTML = `<h2>Choose A Game</h2>`
+}
 
 //Toggling Functions
 function showClassicGame() {
   game = new Game('classics');
   game.players.push(human, computer);
   chooseGameContainer.classList.add('hidden');
+  gameHeader.innerHTML = `<h2>Select A Fighter</h2>`
   classicContainer.classList.remove('hidden');
 }
 
@@ -46,6 +50,7 @@ function showFlavorGame() {
   game = new Game('flavorfuls');
   game.players.push(human, computer);
   chooseGameContainer.classList.add('hidden');
+  gameHeader.innerHTML = `<h2>Select A Fighter</h2>`
   flavorfulContainer.classList.remove('hidden');
 }
 
