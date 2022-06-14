@@ -8,6 +8,9 @@ var flavorfulContainer =document.querySelector('.flavorful-game-container');
 var resultsContainer = document.querySelector('.results-container');
 var chosenPersonImg = document.querySelector('#person-choice');
 var chosenComputerImg = document.querySelector('#computer-choice');
+var personScore = document.querySelector('#human-score');
+var computerScore = document.querySelector('#computer-score');
+var resetEverything = document.querySelector('#reset-button');
 
 //Buttons
 var changeGameButton = document.querySelector('#change-game-button');
@@ -20,9 +23,10 @@ window.addEventListener('load', createPlayers);
 window.addEventListener('load', chooseGameHeader)
 classicGame.addEventListener('click', showClassicGame);
 flavorfulGame.addEventListener('click', showFlavorGame);
-changeGameButton.addEventListener('click', showGamesOptions);
+changeGameButton.addEventListener('click', changeGame);
 // ResetGameButton.addEventListener('click', resetGame);
-fighterButtons.addEventListener('click', function(event){assignFighters(event)})
+fighterButtons.addEventListener('click', function(event){assignFighters(event)});
+resetEverything.addEventListener('click', resetScore);
 
 var game;
 var human;
@@ -62,16 +66,50 @@ function showResults() {
     resultsContainer.classList.remove('hidden');
     chosenPersonImg.setAttribute( "src" , './assets/fighters/'+ game.players[0].pickFighter +'-svgrepo-com.svg');
     chosenComputerImg.setAttribute("src", './assets/fighters/'+ game.players[1].pickFighter +'-svgrepo-com.svg')
-    whoWon.innerHTML += `The ${game.gameWinner} Won`
+    showWinner();
+    showScore();
+    resetGame();
+}
+
+function resetGame() {
+  if(game.gameType === 'classics') {
+
+    setTimeout(function() {classicContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden')}, 2000);
+
+  } else {
+    setTimeout(function() {flavorfulContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden')}, 2000);
+
+  }
+}
+
+function resetScore() {
+  game.players[0].playerScore = 0;
+  game.players[1].playerScore = 0;
+  showScore();
+}
+
+function showWinner() {
+ if (game.gameWinner === `It's a Draw!`) {
+   whoWon.innerHTML = game.gameWinner;
+ } else if (game.gameWinner === `Human`) {
+   whoWon.innerHTML = `You Won!`
+ } else {
+   whoWon.innerHTML = `The ${game.gameWinner} Won`
+ }
+}
+
+function showScore() {
+  personScore.innerText = game.players[0].playerScore
+  computerScore.innerText = game.players[1].playerScore
 }
 
 
-
-function showGamesOptions() {
+function changeGame() {
   classicContainer.classList.add('hidden');
   flavorfulContainer.classList.add('hidden');
   resultsContainer.classList.add('hidden');
   chooseGameContainer.classList.remove('hidden');
+  resetScore();
 }
 
 function assignFighters(event) {
