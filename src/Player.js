@@ -8,14 +8,14 @@ class Player {
   }
   randomComputerFighter(gameType){
     this.pickFighter =  this[gameType][Math.floor(Math.random() * this[gameType].length)];
-    console.log('computer picked:', this.pickFighter);
+    console.log(this.pickFighter);
     console.log('gameType', gameType)
 
   }
   updatePlayerFighter(event) {
     console.log(event.target.classList.contains('fighter-buttons'))
     this.pickFighter = event.target.id;
-    console.log('human picked:', this.pickFighter)
+    console.log(this.pickFighter)
 
   }
 }

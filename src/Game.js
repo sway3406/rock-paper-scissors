@@ -5,8 +5,6 @@ class Game {
     this.gameWinner;
   }
 
-// Fxn determines winner between person & computer
-// Fxn increments person score(ps) and assigns this.gameWinner to person name(pn) or computer name (cn)
   getClassicWinner() {
     var pc = this.players[0].pickFighter;
     var pn = this.players[0].name;
@@ -30,8 +28,6 @@ class Game {
       }
     }
 
-// Fxn determines winner between person & computer
-// Fxn increments person score(ps) and assigns this.gameWinner to person name(pn) or computer name (cn)
   getFlavorfulWinner() {
     var pc = this.players[0].pickFighter;
     var ps = this.players[0].playerScore;
