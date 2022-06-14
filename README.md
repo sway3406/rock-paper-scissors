@@ -20,7 +20,7 @@
 ### Classic Version:
 #### Fighters: Rock, Paper, Scissors
 
-##### Rock smashes scissor
+  - Rock smashes scissor
   - Scissors cut paper
   - Paper covers rock
 
