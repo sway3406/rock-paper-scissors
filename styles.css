@@ -263,3 +263,8 @@ height: 70%;
   background-image: url("./assets/desserts/cupcake-svgrepo-com.svg");
   background-size: cover;
 }
+
+.chosen-fighter {
+  height: 150px;
+  width: 150px;
+}
