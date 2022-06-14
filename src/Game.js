@@ -44,16 +44,16 @@ class Game {
       } else if (pc === 'cake' && cc === 'cupcake' || 'pie') {
         ++this.players[0].playerScore;
         this.gameWinner = pn;
-      } else if (pc === 'pie' && cc === 'cookie' || 'ice-cream') {
+      } else if (pc === 'pie' && cc === 'cookie' || 'Ice Cream') {
       ++this.players[0].playerScore;
         this.gameWinner = pn;
-      } else if (pc === 'Ice-Cream' && cc === 'cupcake' || 'cake') {
+      } else if (pc === 'Ice Cream' && cc === 'cupcake' || 'cake') {
         ++this.players[0].playerScore;
         this.gameWinner = pn;
-      } else if (pp === 'cupcake' && cp === 'cookie' || 'pie') {
+      } else if (pc === 'cupcake' && cp === 'cookie' || 'pie') {
         ++this.players[0].playerScore;
         this.gameWinner = pn;
-      } else if (pc === 'cookie' && cc === 'ice-cream' || 'cake') {
+      } else if (pc === 'cookie' && cc === 'Ice Cream' || 'cake') {
         ++this.players[0].playerScore;
         this.gameWinner = pn;
       } else {
