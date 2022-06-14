@@ -12,7 +12,7 @@ class Game {
     var cs = this.players[1].playerScore;
     var cn = this.players[1].name;
       if (pc === cc) {
-        this.gameWinner = `It's a Draw! Please choose again`;
+        this.gameWinner = `It's a Draw!`;
       } else if (pc === 'rock' && cc === 'scissor') {
         ++this.players[0].playerScore;
         this.gameWinner = pn;
@@ -36,20 +36,20 @@ class Game {
     var cs = this.players[1].playerScore;
     var cn = this.players[1].name;
       if (pc === cc) {
-        this.gameWinner = `It's a draw! Please choose again`;
-      } else if (pc === 'cake' && cc === 'cupcake' || 'pie') {
+        this.gameWinner = `It's a draw!`;
+      } else if (pc === 'cake' && cc === 'cupcake' || cc === 'pie') {
         ++this.players[0].playerScore;
         this.gameWinner = pn;
-      } else if (pc === 'pie' && cc === 'cookie' || 'Ice Cream') {
+      } else if (pc === 'pie' && cc === 'cookie' || cc === 'Ice Cream') {
       ++this.players[0].playerScore;
         this.gameWinner = pn;
-      } else if (pc === 'Ice Cream' && cc === 'cupcake' || 'cake') {
+      } else if (pc === 'Ice Cream' && cc === 'cupcake' || cc === 'cake') {
         ++this.players[0].playerScore;
         this.gameWinner = pn;
-      } else if (pc === 'cupcake' && cp === 'cookie' || 'pie') {
+      } else if (pc === 'cupcake' && cc === 'cookie' || cc === 'pie') {
         ++this.players[0].playerScore;
         this.gameWinner = pn;
-      } else if (pc === 'cookie' && cc === 'Ice Cream' || 'cake') {
+      } else if (pc === 'cookie' && cc === 'Ice Cream' || cc === 'cake') {
         ++this.players[0].playerScore;
         this.gameWinner = pn;
       } else {
