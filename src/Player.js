@@ -4,7 +4,7 @@ class Player {
     this.pickFighter = null;
     this.playerScore = 0;
     this.classics = ['rock', 'paper', 'scissor'];
-    this.flavorfuls = ['cake', 'pie', 'Ice Cream', 'cupcake', 'cookie'];
+    this.flavorfuls = ['cake', 'pie', 'ice-cream', 'cupcake', 'cookie'];
   }
   randomComputerFighter(gameType){
     this.pickFighter =  this[gameType][Math.floor(Math.random() * this[gameType].length)];
