@@ -10,11 +10,15 @@ class Player {
     this.pickFighter =  this[gameType][Math.floor(Math.random() * this[gameType].length)];
     console.log('computer picked:', this.pickFighter);
     console.log('gameType', gameType);
+
+    //I need to have playerObj for computer added to Game class after picking a fighter
+
   }
   updatePlayerFighter(event) {
     console.log(event.target.classList.contains('fighter-buttons'))
-  // if (event.target.classList.contains('fighter-buttons')) {
-  this.pickFighter = event.target.id;
-  console.log('human picked:', this.pickFighter)
+    this.pickFighter = event.target.id;
+    console.log('human picked:', this.pickFighter)
+
+    //I need to have playerObj for human added to Game class after picking a fighter
   }
 }
