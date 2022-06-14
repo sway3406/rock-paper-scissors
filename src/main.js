@@ -16,44 +16,58 @@ classicGame.addEventListener('click', showClassicGame);
 flavorfulGame.addEventListener('click', showFlavorGame);
 changeGameButton.addEventListener('click', showGamesOptions);
 // ResetGameButton.addEventListener('click', resetGame);
-fighterButtons.addEventListener('click', function(event){assignFighterToHuman(event)})
+fighterButtons.addEventListener('click', function(event){assignFighters(event)})
 
+var game;
 var human;
 var computer;
 
 //Instantiate players on page load
-function createPlayers(){
-human = new Player({name: 'Human'});
-computer = new Player({name: 'Computer'});
+function createPlayers() {
+  human = new Player({name: 'Human'});
+  computer = new Player({name: 'Computer'});
 }
 
 //Toggling Functions
 function showClassicGame() {
+  game = new Game('classics');
+  game.players.push(human, computer);
   chooseGameContainer.classList.add('hidden');
   classicContainer.classList.remove('hidden');
-  computer.randomComputerFighter('classics');
 }
 
 function showFlavorGame() {
+  game = new Game('flavorfuls');
+  game.players.push(human, computer);
   chooseGameContainer.classList.add('hidden');
   flavorfulContainer.classList.remove('hidden');
-  computer.randomComputerFighter('flavorfuls');
 }
 
 function showGamesOptions() {
   classicContainer.classList.add('hidden');
   flavorfulContainer.classList.add('hidden');
   chooseGameContainer.classList.remove('hidden');
-
 }
 
-function assignFighterToHuman(event) {
-  if (event.target.classList.contains('fighter-buttons')) {
+function assignFighters(event) {
+  if (event.target.classList.contains('fighter-buttons') && game.gameType === 'classics') {
     human.updatePlayerFighter(event);
-    console.log(event.target)
+    computer.randomComputerFighter('classics');
+    pickWinner('classics');
+   } else if (event.target.classList.contains('fighter-buttons') && game.gameType === 'flavorfuls') {
+    human.updatePlayerFighter(event);
+    computer.randomComputerFighter('flavorfuls');
+    pickWinner('flavorfuls');
   }
 }
 
+ function pickWinner(gameType) {
+   if (gameType === 'classics') {
+    game.getClassicWinner();
+ } else {
+   game.getFlavorfulWinner();
+ }
+}
 
 
 //This function will:
