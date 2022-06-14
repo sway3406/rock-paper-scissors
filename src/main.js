@@ -6,6 +6,7 @@ var flavorfulGame = document.querySelector('#flavorful-game-box');
 var classicContainer = document.querySelector('.classic-game-container');
 var flavorfulContainer =document.querySelector('.flavorful-game-container');
 var resultsContainer = document.querySelector('.results-container');
+var chosenPersonImg = document.querySelector('#person-choice');
 
 //Buttons
 var changeGameButton = document.querySelector('#change-game-button');
@@ -53,17 +54,12 @@ function showFlavorGame() {
   flavorfulContainer.classList.remove('hidden');
 }
 
-//This function will:
-// Get Invoked when a user selects an element by id from the DOM. This will either be from the classicVersion or the flavorfulVersion
-// This function will
-// hide the classicVersion
-// hide the flavorfulVersion
-// show the results Container
 
 function showResults() {
     classicContainer.classList.add('hidden');
-    flavorfulContainer.classList.add('hidden');
+    flavorfulContainer.classList.add('hidden');gameHeader.innerHTML = `<h2>Results</h2>`
     resultsContainer.classList.remove('hidden');
+    chosenPersonImg.setAttribute( "src" , './assets/classics/'+ game.players[0].pickFighter +'-svgrepo-com.svg')
 }
 
 // function showResults(gameType) {
