@@ -13,7 +13,7 @@ var chosenComputerImg = document.querySelector('#computer-choice');
 var changeGameButton = document.querySelector('#change-game-button');
 var resetGameButton = document.querySelector('#reset-game-button');
 var fighterButtons = document.querySelector('.main-stage');
-
+var whoWon = document.querySelector('.who-won');
 
 //Event Handlers
 window.addEventListener('load', createPlayers);
@@ -62,17 +62,10 @@ function showResults() {
     resultsContainer.classList.remove('hidden');
     chosenPersonImg.setAttribute( "src" , './assets/fighters/'+ game.players[0].pickFighter +'-svgrepo-com.svg');
     chosenComputerImg.setAttribute("src", './assets/fighters/'+ game.players[1].pickFighter +'-svgrepo-com.svg')
+    whoWon.innerHTML += `The ${game.gameWinner} Won`
 }
 
-// function showResults(gameType) {
-//   if (gameType === 'classics') {
-//     classicContainer.classList.add('hidden');
-//     resultsContainer.classList.remove('hidden');
-//   } else {
-//     flavorfulContainer.classList.add('hidden');
-//     resultsContainer.classList.remove('hidden');
-//   }
-// }
+
 
 function showGamesOptions() {
   classicContainer.classList.add('hidden');
