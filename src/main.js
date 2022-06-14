@@ -11,12 +11,13 @@ var chosenComputerImg = document.querySelector('#computer-choice');
 var personScore = document.querySelector('#human-score');
 var computerScore = document.querySelector('#computer-score');
 var resetEverything = document.querySelector('#reset-button');
+var whoWon = document.querySelector('.who-won');
 
 //Buttons
 var changeGameButton = document.querySelector('#change-game-button');
 var resetGameButton = document.querySelector('#reset-game-button');
 var fighterButtons = document.querySelector('.main-stage');
-var whoWon = document.querySelector('.who-won');
+
 
 //Event Handlers
 window.addEventListener('load', createPlayers);
@@ -24,7 +25,6 @@ window.addEventListener('load', chooseGameHeader)
 classicGame.addEventListener('click', showClassicGame);
 flavorfulGame.addEventListener('click', showFlavorGame);
 changeGameButton.addEventListener('click', changeGame);
-// ResetGameButton.addEventListener('click', resetGame);
 fighterButtons.addEventListener('click', function(event){assignFighters(event)});
 resetEverything.addEventListener('click', resetScore);
 
@@ -32,7 +32,6 @@ var game;
 var human;
 var computer;
 
-//Instantiate players on page load
 function createPlayers() {
   human = new Player({name: 'Human'});
   computer = new Player({name: 'Computer'});
@@ -42,7 +41,6 @@ function chooseGameHeader() {
  gameHeader.innerHTML = `<h2>Choose A Game</h2>`
 }
 
-//Toggling Functions
 function showClassicGame() {
   game = new Game('classics');
   game.players.push(human, computer);
@@ -58,51 +56,6 @@ function showFlavorGame() {
   gameHeader.innerHTML = `<h2>Select A Fighter</h2>`
   flavorfulContainer.classList.remove('hidden');
 }
-
-
-function showResults() {
-    classicContainer.classList.add('hidden');
-    flavorfulContainer.classList.add('hidden');gameHeader.innerHTML = `<h2>Results</h2>`
-    resultsContainer.classList.remove('hidden');
-    chosenPersonImg.setAttribute( "src" , './assets/fighters/'+ game.players[0].pickFighter +'-svgrepo-com.svg');
-    chosenComputerImg.setAttribute("src", './assets/fighters/'+ game.players[1].pickFighter +'-svgrepo-com.svg')
-    showWinner();
-    showScore();
-    resetGame();
-}
-
-function resetGame() {
-  if(game.gameType === 'classics') {
-
-    setTimeout(function() {classicContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden')}, 2000);
-
-  } else {
-    setTimeout(function() {flavorfulContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden')}, 2000);
-
-  }
-}
-
-function resetScore() {
-  game.players[0].playerScore = 0;
-  game.players[1].playerScore = 0;
-  showScore();
-}
-
-function showWinner() {
- if (game.gameWinner === `It's a Draw!`) {
-   whoWon.innerHTML = game.gameWinner;
- } else if (game.gameWinner === `Human`) {
-   whoWon.innerHTML = `You Won!`
- } else {
-   whoWon.innerHTML = `The ${game.gameWinner} Won`
- }
-}
-
-function showScore() {
-  personScore.innerText = game.players[0].playerScore
-  computerScore.innerText = game.players[1].playerScore
-}
-
 
 function changeGame() {
   classicContainer.classList.add('hidden');
@@ -124,31 +77,52 @@ function assignFighters(event) {
   }
 }
 
- function pickWinner(gameType) {
-   if (gameType === 'classics') {
-    game.getClassicWinner();
-    showResults();
+function pickWinner(gameType) {
+  if (gameType === 'classics') {
+   game.getClassicWinner();
+   showResults();
  } else {
    game.getFlavorfulWinner();
    showResults();
+  }
+}
+
+function showResults() {
+    classicContainer.classList.add('hidden');
+    flavorfulContainer.classList.add('hidden');gameHeader.innerHTML = `<h2>Results</h2>`
+    resultsContainer.classList.remove('hidden');
+    chosenPersonImg.setAttribute( "src" , './assets/fighters/'+ game.players[0].pickFighter +'-svgrepo-com.svg');
+    chosenComputerImg.setAttribute("src", './assets/fighters/'+ game.players[1].pickFighter +'-svgrepo-com.svg')
+    showWinner();
+    showScore();
+    resetGame();
+}
+
+function showWinner() {
+ if (game.gameWinner === `It's a Draw!`) {
+   whoWon.innerHTML = game.gameWinner;
+ } else if (game.gameWinner === `Human`) {
+   whoWon.innerHTML = `You Won!`
+ } else {
+   whoWon.innerHTML = `The ${game.gameWinner} Won`
  }
 }
 
+function showScore() {
+  personScore.innerText = game.players[0].playerScore
+  computerScore.innerText = game.players[1].playerScore
+}
 
+function resetGame() {
+  if(game.gameType === 'classics') {
+    setTimeout(function() {classicContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden')}, 2000);
+  } else {
+    setTimeout(function() {flavorfulContainer.classList.remove('hidden'), resultsContainer.classList.add('hidden')}, 2000);
+  }
+}
 
-
-
-
-//This function will:
-// Display the image selected by the user to the DOM
-// Image will be interpolated into results-container
-// function showPersonFighter {
-//
-// }
-
-// This function will:
-// display the randomly chosen element by the computer
-// Image will be interpolated into results-container
-// function showRandomComputerFighter {
-//
-// }
+function resetScore() {
+  game.players[0].playerScore = 0;
+  game.players[1].playerScore = 0;
+  showScore();
+}
