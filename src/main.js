@@ -60,7 +60,7 @@ function showFlavorGame() {
 // hide the flavorfulVersion
 // show the results Container
 
-function showResults(gameType) {
+function showResults() {
     classicContainer.classList.add('hidden');
     flavorfulContainer.classList.add('hidden');
     resultsContainer.classList.remove('hidden');
