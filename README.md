@@ -1,5 +1,5 @@
 # Rock, Paper, Scissors Gone Wild
-## Same Great Game With Better Taste
+## Same Great Game With A Better Taste
 
 
 ### Classic Version:
