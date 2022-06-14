@@ -218,17 +218,17 @@ height: 70%;
 }
 
 #rock {
-  background-image: url("./assets/classics/rock-svgrepo-com.svg");
+  background-image: url("./assets/fighters/rock-svgrepo-com.svg");
   background-size: cover;
 }
 
 #paper {
-  background-image: url("./assets/classics/paper-svgrepo-com.svg");
+  background-image: url("./assets/fighters/paper-svgrepo-com.svg");
   background-size: cover;
 }
 
 #scissor {
-  background-image: url("./assets/classics/scissor-svgrepo-com.svg");
+  background-image: url("./assets/fighters/scissor-svgrepo-com.svg");
   background-size: cover;
 }
 
@@ -240,27 +240,27 @@ height: 70%;
 }
 
 #cake {
-  background-image: url("./assets/desserts/cake-svgrepo-com.svg");
+  background-image: url("./assets/fighters/cake-svgrepo-com.svg");
   background-size: cover;
 }
 
 #pie {
-  background-image: url("./assets/desserts/pie-svgrepo-com.svg");
+  background-image: url("./assets/fighters/pie-svgrepo-com.svg");
   background-size: cover;
 }
 
 #cookie {
-  background-image: url("./assets/desserts/cookie-svgrepo-com.svg");
+  background-image: url("./assets/fighters/cookie-svgrepo-com.svg");
   background-size: cover;
 }
 
 #ice-cream {
-  background-image: url("./assets/desserts/ice-cream-svgrepo-com.svg");
+  background-image: url("./assets/fighters/ice-cream-svgrepo-com.svg");
   background-size: cover;
 }
 
 #cupcake {
-  background-image: url("./assets/desserts/cupcake-svgrepo-com.svg");
+  background-image: url("./assets/fighters/cupcake-svgrepo-com.svg");
   background-size: cover;
 }
 
