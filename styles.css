@@ -223,12 +223,12 @@ height: 70%;
 }
 
 #paper {
-  background-image: url("./assets/classics/paper-sheet-svgrepo-com.svg");
+  background-image: url("./assets/classics/paper-svgrepo-com.svg");
   background-size: cover;
 }
 
 #scissor {
-  background-image: url("./assets/classics/scissors-svgrepo-com.svg");
+  background-image: url("./assets/classics/scissor-svgrepo-com.svg");
   background-size: cover;
 }
 
